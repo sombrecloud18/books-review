@@ -176,6 +176,10 @@
   .review_find input::placeholder {
     font-size: 18px;
   }
+
+  .star {
+    font-size: 40px;
+  }
   
   .lots__card-list-item {
     width: 100%;
