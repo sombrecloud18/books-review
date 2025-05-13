@@ -558,7 +558,6 @@ select,
 
   .reviews-slider {
     padding: 40px 20px;
-    background-color: var(--slider-bg-color);
     margin-top: 50px;
   }
   
@@ -566,7 +565,7 @@ select,
     text-align: center;
     margin-bottom: 30px;
     font-size: 28px;
-    color: var(--text-color);
+    color: var(--font-color);
   }
   
   .reviews-slider__container {
@@ -601,7 +600,7 @@ select,
   }
   
   .review-card__author {
-    color: var(--secondary-text-color);
+    color: var(--font-color);
     font-size: 14px;
     margin: 5px 0;
   }
