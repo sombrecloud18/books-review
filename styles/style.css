@@ -613,7 +613,7 @@ select,
   }
   
   .review-card__text {
-    color: var(--text-color);
+    color: var(--font-color);
     line-height: 1.5;
   }
   
@@ -622,7 +622,7 @@ select,
     top: 50%;
     transform: translateY(-50%);
     background: var(--accent-color);
-    color: white;
+    color: var(--font-color);
     border: none;
     border-radius: 50%;
     width: 40px;
