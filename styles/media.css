@@ -252,10 +252,14 @@
   }
 }
 
-@media (max-width: 375px) {
+@media (max-width: 380px) {
   .header__logo-image {
     width: 100px;
     height: auto;
+  }
+
+  .star {
+    font-size: 30px;
   }
   
   .cover__title {
