@@ -141,9 +141,7 @@
             </li>
           </ul>
         </section>
-      </main>
-  
-      <!-- Модальное окно для просмотра рецензии -->
+      </main>  
       <div id="reviewModal" class="modal">
         <div class="modal-content">
           <span class="close">&times;</span>
@@ -163,6 +161,40 @@
           <div id="modalReviewText" class="review-modal__text"></div>
         </div>
       </div>
+
+      <section class="reviews-slider">
+  <h2 class="reviews-slider__title">Последние отзывы</h2>
+  <div class="reviews-slider__container">
+    <div class="reviews-slider__track">
+      <div class="reviews-slider__slide">
+        <div class="review-card">
+          <h3 class="review-card__title">Норвежский лес</h3>
+          <p class="review-card__author">Алексей Петров, 15.05.2023</p>
+          <div class="review-card__rating">★★★★☆</div>
+          <p class="review-card__text">Потрясающий роман о любви и потере. Мураками мастерски передает атмосферу 60-х и внутренний мир главного героя...</p>
+        </div>
+      </div>
+      <div class="reviews-slider__slide">
+        <div class="review-card">
+          <h3 class="review-card__title">Мастер и Маргарита</h3>
+          <p class="review-card__author">Мария Иванова, 22.04.2023</p>
+          <div class="review-card__rating">★★★★★</div>
+          <p class="review-card__text">Шедевр мировой литературы! Булгаков создал уникальное произведение, где переплетаются реальность и мистика...</p>
+        </div>
+      </div>
+      <div class="reviews-slider__slide">
+        <div class="review-card">
+          <h3 class="review-card__title">1984</h3>
+          <p class="review-card__author">Дмитрий Смирнов, 10.03.2023</p>
+          <div class="review-card__rating">★★★★★</div>
+          <p class="review-card__text">Пугающе актуальная антиутопия. Оруэлл предсказал многие механизмы контроля, которые используются в современном мире...</p>
+        </div>
+      </div>
+    </div>
+    <button class="reviews-slider__btn reviews-slider__btn_prev">←</button>
+    <button class="reviews-slider__btn reviews-slider__btn_next">→</button>
+  </div>
+</section>
     <footer class="footer">
       <nav class="footer__menu">
         <ul class="footer__menu-list">

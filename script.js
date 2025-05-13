@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Модальное окно для рецензий (сохранена существующая функция)
+    // Модальное окно для рецензий 
     const modal = document.getElementById('reviewModal');
     if (modal) {
         const closeBtn = document.querySelector('.close');
@@ -268,4 +268,44 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
+
+        const sliderTrack = document.querySelector('.reviews-slider__track');
+    const slides = document.querySelectorAll('.reviews-slider__slide');
+    const btnPrev = document.querySelector('.reviews-slider__btn_prev');
+    const btnNext = document.querySelector('.reviews-slider__btn_next');
+    
+    let currentSlide = 0;
+    const slideCount = slides.length;
+    
+    function updateSlider() {
+      sliderTrack.style.transform = `translateX(-${currentSlide * 100}%)`;
+    }
+    
+    btnPrev.addEventListener('click', function() {
+        currentSlide = (currentSlide > 0) ? currentSlide - 1 : slideCount - 1;
+        updateSlider();
+    });
+    
+    btnNext.addEventListener('click', function() {
+        currentSlide = (currentSlide < slideCount - 1) ? currentSlide + 1 : 0;
+        updateSlider();
+    });
+    
+    // Автопрокрутка 
+    let slideInterval = setInterval(() => {
+        currentSlide = (currentSlide < slideCount - 1) ? currentSlide + 1 : 0;
+        updateSlider();
+    }, 5000);
+    
+    // Остановка автопрокрутки при наведении
+    sliderTrack.addEventListener('mouseenter', () => {
+        clearInterval(slideInterval);
+    });
+    
+    sliderTrack.addEventListener('mouseleave', () => {
+        slideInterval = setInterval(() => {
+            currentSlide = (currentSlide < slideCount - 1) ? currentSlide + 1 : 0;
+            updateSlider();
+        }, 5000);
+    });
 });
